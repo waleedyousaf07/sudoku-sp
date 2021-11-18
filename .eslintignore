@@ -1,0 +1,12 @@
+# Disable eslint for everything by default
+# src/**/*.js
+
+# ---------------------------------------------- #
+
+# Enable eslint just for some files/folders
+
+# E.g for a complete folder:
+# !src/components/main/content/vpc/awsVpc/subnet/**/*.js
+
+# E.g for a specific file:
+# !src/components/main/content/vpc/awsVpc/subnet/subnetList/AwsSubnetsList.view.js
