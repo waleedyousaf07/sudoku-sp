@@ -3,16 +3,14 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import './App.scss';
-import rootRoutes from './core/rootRoutes';
-import DummyTopBar from './features/dummyTopBar/DummyTopBar.view';
+import Board from './features/board/Board.view';
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <div className="app">
-    <h1>Heyy!</h1>
-    <DummyTopBar />
-    {rootRoutes()}
+    <h1>Soduko</h1>
+    <Board />
   </div>
 );
 
