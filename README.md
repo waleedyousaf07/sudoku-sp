@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-A ReactJS biolerplate
+Sudoku (Used my own react biolerplate [fe-react-biolerplate](https://github.com/waleedyousaf07/fe-react-biolerplate))
 
 ## Stack (Tools and Technologies):
 
