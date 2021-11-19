@@ -3,6 +3,7 @@
 ## Introduction:
 
 Sudoku (Used my own react biolerplate [fe-react-biolerplate](https://github.com/waleedyousaf07/fe-react-biolerplate))
+The app is deployed on: [Sudoku](https://naughty-nobel-f9f9cb.netlify.app/)
 
 ## Stack (Tools and Technologies):
 
