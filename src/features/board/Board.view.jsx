@@ -8,6 +8,7 @@ import './Board.scss';
 
 const Board = () => {
   const [gridData, setGridData] = useState(initialGridData);
+  const [fetchError, setFetchError] = useState('');
   const [difficulty, setDifficulty] = useState(difficulties[0].value);
   const {
     data,
@@ -15,7 +16,7 @@ const Board = () => {
     isLoading,
   } = useQuery(['boardData', difficulty], () => getBoardData({ difficulty }), {
     staleTime: 5000,
-    onError: () => console.log('Something went wrong while fetching data'),
+    onError: () => setFetchError('Something went wrong while fetching data'),
   });
 
   useEffect(() => {
@@ -29,6 +30,7 @@ const Board = () => {
       <BoardUi gridData={gridData} setGridData={setGridData} />
       <DifficultyUi difficulty={difficulty} setDifficulty={setDifficulty} setGridData={setGridData} />
       {(isFetching || isLoading) && 'Fetching data...'}
+      {fetchError}
     </div>
   );
 };
