@@ -1,4 +1,3 @@
-/* eslint-disable */
 const initialGridData = [
   [{ A1: null }, { A2: null }, { A3: null }, { B1: null }, { B2: null }, { B3: null }, { C1: null }, { C2: null }, { C3: null }],
   [{ A4: null }, { A5: null }, { A6: null }, { B4: null }, { B5: null }, { B6: null }, { C4: null }, { C5: null }, { C6: null }],
@@ -27,12 +26,11 @@ export const handleOnCellDataChange = (gridData, currentRowIndex, currentColInde
   return row;
 });
 
-export const getParsedBoardData = (data) => {
-  return initialGridData.map((row) => row.map((col) => {
-    const cellKey = Object.keys(col)[0];
-    return ({ [cellKey]: data[cellKey] ?? null });
-  }));
-};
+export const getParsedBoardData = (data) => initialGridData.map((row) => row.map((col) => {
+  const cellKey = Object.keys(col)[0];
+  // eslint-disable-next-line radix
+  return ({ [cellKey]: parseInt(data[cellKey]) ?? null });
+}));
 
 export const difficulties = [
   { label: 'Easy', value: 'easy' },
