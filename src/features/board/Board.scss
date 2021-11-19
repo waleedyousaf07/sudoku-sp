@@ -78,4 +78,13 @@
   #cell-62, #cell-71, #cell-80 { border-right:  2px solid #000000; }
   #cell-78, #cell-79, #cell-80 { border-bottom: 2px solid #000000; }
   #cell-60, #cell-69, #cell-78 { border-left:   2px solid #000000; }
+
+  .difficulty-form {
+    padding: 8px;
+    margin: 16px;
+
+    input {
+      margin: 8px;
+    }
+  }
 }

@@ -1,6 +1,7 @@
+/* eslint-disable */
 const initialGridData = [
-  [{ A1: 1 }, { A2: 2 }, { A3: null }, { B1: null }, { B2: null }, { B3: null }, { C1: null }, { C2: null }, { C3: null }],
-  [{ A4: null }, { A5: 7 }, { A6: null }, { B4: null }, { B5: null }, { B6: null }, { C4: null }, { C5: null }, { C6: null }],
+  [{ A1: null }, { A2: null }, { A3: null }, { B1: null }, { B2: null }, { B3: null }, { C1: null }, { C2: null }, { C3: null }],
+  [{ A4: null }, { A5: null }, { A6: null }, { B4: null }, { B5: null }, { B6: null }, { C4: null }, { C5: null }, { C6: null }],
   [{ A7: null }, { A8: null }, { A9: null }, { B7: null }, { B8: null }, { B9: null }, { C7: null }, { C8: null }, { C9: null }],
 
   [{ D1: null }, { D2: null }, { D3: null }, { E1: null }, { E2: null }, { E3: null }, { F1: null }, { F2: null }, { F3: null }],
@@ -18,12 +19,25 @@ export const handleOnCellDataChange = (gridData, currentRowIndex, currentColInde
       if (currentColIndex === colIndex) {
         const cellKey = Object.keys(col)[0];
         // eslint-disable-next-line radix
-        return ({ [cellKey]: parseInt(currentValue) });
+        return ({ [cellKey]: currentValue });
       }
       return col;
     });
   }
   return row;
 });
+
+export const getParsedBoardData = (data) => {
+  return initialGridData.map((row) => row.map((col) => {
+    const cellKey = Object.keys(col)[0];
+    return ({ [cellKey]: data[cellKey] ?? null });
+  }));
+};
+
+export const difficulties = [
+  { label: 'Easy', value: 'easy' },
+  { label: 'Medium', value: 'medium' },
+  { label: 'Hard', value: 'hard' },
+];
 
 export default initialGridData;
