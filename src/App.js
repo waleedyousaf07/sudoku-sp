@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import './App.scss';
 import Board from './features/board/Board.view';
+import './App.scss';
 
 const queryClient = new QueryClient();
 

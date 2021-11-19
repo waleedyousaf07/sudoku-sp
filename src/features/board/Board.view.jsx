@@ -5,6 +5,7 @@ import DifficultyUi from './content/DifficultyUi.view';
 import initialGridData, { difficulties, getParsedBoardData } from './Board.utils';
 import getBoardData from './board.api';
 import './Board.scss';
+import ValidationUi from './content/ValidationUi.view';
 
 const Board = () => {
   const [gridData, setGridData] = useState(initialGridData);
@@ -28,6 +29,7 @@ const Board = () => {
   return (
     <div id="board">
       <BoardUi gridData={gridData} setGridData={setGridData} />
+      <ValidationUi />
       <DifficultyUi difficulty={difficulty} setDifficulty={setDifficulty} setGridData={setGridData} />
       {(isFetching || isLoading) && 'Fetching data...'}
       {fetchError}
