@@ -1,7 +1,3 @@
-import dummyComponentReducer, { dummyComponentSlice } from '../features/dummyComponent/dummyComponent.slice';
-
-export const rootReducer = {
-  [dummyComponentSlice.name]: dummyComponentReducer,
-};
+export const rootReducer = {};
 
 export default rootReducer;
